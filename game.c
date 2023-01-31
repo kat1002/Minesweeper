@@ -198,11 +198,14 @@ void run(){
             }
 
             if(state == LOSE){
+                DrawRectangle(screenWidth / 2 - MeasureText("GAME OVER!", 64) / 2 - 10, screenHeight / 2 - 20, 420, 200, WHITE);
                 DrawText("GAME OVER!", screenWidth / 2 - MeasureText("GAME OVER!", 64) / 2, screenHeight / 2, 64, RED);
-                
+                DrawText("Press 'r' to restart!", screenWidth / 2 - MeasureText("Press 'r' to restart!", 20) / 2, screenHeight / 2 + 150, 20, RED);                
             }
             if(state == WIN){
+                DrawRectangle(screenWidth / 2 - MeasureText("YOU WIN!", 64) / 2 - 10, screenHeight / 2 - 20, 420, 200, WHITE);
                 DrawText("YOU WIN!", screenWidth / 2 - MeasureText("YOU WIN!", 64) / 2, screenHeight / 2, 64, RED);
+                DrawText("Press 'r' to restart!", screenWidth / 2 - MeasureText("Press 'r' to restart!", 20) / 2, screenHeight / 2 + 150, 20, RED);                
             }
         EndDrawing();   
     }
